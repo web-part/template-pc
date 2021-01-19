@@ -1,0 +1,31 @@
+/**
+* src: @definejs/dialog/modules/Dialog/Template/Sample.js
+* pkg: @definejs/dialog@1.0.0
+*/
+define('Dialog/Template/Sample', function (require, module, exports) { 
+    
+    module.exports = `
+    <div id="{id}" class="definejs-dialog {cssClass}" style="{style} display: none;">
+        <template name="header" placeholder="header">
+            <header id="{headerId}">
+                {title}
+            </header>
+        </template>
+    
+        <template name="content" placeholder="content">
+            <article id="{articleId}" class="{noHeader} {noFooter}">
+                <div id="{contentId}">{content}</div>
+            </article>
+        </template>
+    
+        <template name="footer" placeholder="footer">
+            <footer id="{footerId}" class="Buttons-{count}">
+                <template name="button" placeholder="buttons">
+                    <button data-index="{index}" class="{cssClass}" style="{style}">{text}</button>
+                </template>
+            </footer>
+        </template>
+    </div>
+    `;
+    
+});

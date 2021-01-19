@@ -1,0 +1,161 @@
+{
+    "@definejs/alert": [
+        "@definejs/dialog",
+        "@definejs/string"
+    ],
+    "@definejs/api": [
+        "@definejs/emitter",
+        "@definejs/fn",
+        "@definejs/json",
+        "@definejs/object",
+        "@definejs/proxy",
+        "@definejs/query",
+        "@definejs/string"
+    ],
+    "@definejs/app": [
+        "@definejs/app-module",
+        "@definejs/local-storage",
+        "@definejs/navigator",
+        "@definejs/object",
+        "@definejs/package",
+        "@definejs/session-storage",
+        "@definejs/tasker",
+        "jquery"
+    ],
+    "@definejs/app-module": [
+        "@definejs/emitter",
+        "@definejs/module-manager",
+        "@definejs/object",
+        "@definejs/string"
+    ],
+    "@definejs/array": [],
+    "@definejs/confirm": [
+        "@definejs/dialog"
+    ],
+    "@definejs/date": [
+        "@definejs/string"
+    ],
+    "@definejs/defaults": [
+        "@definejs/object"
+    ],
+    "@definejs/dialog": [
+        "@definejs/emitter",
+        "@definejs/masker",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/style",
+        "@definejs/template",
+        "jquery"
+    ],
+    "@definejs/emitter": [
+        "@definejs/object",
+        "@definejs/tree"
+    ],
+    "@definejs/escape": [],
+    "@definejs/fn": [
+        "@definejs/math"
+    ],
+    "@definejs/hash": [
+        "@definejs/object",
+        "@definejs/query"
+    ],
+    "@definejs/html-parser": [],
+    "@definejs/json": [],
+    "@definejs/loading": [
+        "@definejs/emitter",
+        "@definejs/masker",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/style",
+        "jquery"
+    ],
+    "@definejs/local-storage": [
+        "@definejs/object",
+        "circular-json"
+    ],
+    "@definejs/masker": [
+        "@definejs/emitter",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/style",
+        "jquery"
+    ],
+    "@definejs/math": [],
+    "@definejs/module-manager": [],
+    "@definejs/navigator": [
+        "@definejs/emitter",
+        "@definejs/hash",
+        "@definejs/session-storage",
+        "@definejs/string"
+    ],
+    "@definejs/object": [],
+    "@definejs/package": [
+        "@definejs/api",
+        "@definejs/query",
+        "@definejs/script",
+        "@definejs/tasker",
+        "@definejs/url"
+    ],
+    "@definejs/panel": [
+        "@definejs/app-module",
+        "@definejs/emitter",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/template",
+        "jquery"
+    ],
+    "@definejs/proxy": [
+        "@definejs/fn",
+        "@definejs/json",
+        "@definejs/query",
+        "@definejs/script",
+        "@definejs/url"
+    ],
+    "@definejs/query": [
+        "@definejs/object",
+        "@definejs/string"
+    ],
+    "@definejs/script": [
+        "@definejs/object"
+    ],
+    "@definejs/session-storage": [
+        "@definejs/object",
+        "circular-json"
+    ],
+    "@definejs/string": [],
+    "@definejs/style": [
+        "@definejs/object"
+    ],
+    "@definejs/tabs": [
+        "@definejs/emitter",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/template",
+        "jquery"
+    ],
+    "@definejs/tasker": [
+        "@definejs/emitter"
+    ],
+    "@definejs/template": [
+        "@definejs/emitter",
+        "@definejs/html-parser",
+        "@definejs/object",
+        "@definejs/string",
+        "jquery"
+    ],
+    "@definejs/timer": [],
+    "@definejs/toast": [
+        "@definejs/emitter",
+        "@definejs/masker",
+        "@definejs/object",
+        "@definejs/string",
+        "@definejs/style",
+        "font-awesome",
+        "jquery"
+    ],
+    "@definejs/tree": [],
+    "@definejs/url": [],
+    "@definejs/view": [
+        "@definejs/panel"
+    ]
+}

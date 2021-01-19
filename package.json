@@ -1,0 +1,17 @@
+{
+  "name": "webpart-template-normal",
+  "version": "1.0.0",
+  "description": "用于创建针对 PC 端的标准模式的网站模板。",
+  "scripts": {
+    "start": "webpart watch -p"
+  },
+  "keywords": [],
+  "author": "micty",
+  "email": "mictydeng@qq.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-part/template-normal.git"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>用于创建针对 PC 端的标准模式的网站模板</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <link href="f/font-awesome/css/font-awesome.debug.css" rel="stylesheet" />
+    <link href="f/definejs/dist/definejs.debug.css" rel="stylesheet" />
+
+   
+    <!--webpart.less.begin-->
+    <script>
+        [
+            'style/less/global.less',
+            'lib/**/*.less',
+            'modules/**/*.less',
+            'views/**/*.less',
+        ]
+    </script>
+    <!--webpart.less.end-->
+
+</head>
+
+<body>
+    <!--webpart.html.begin-->
+    <script>
+        [
+            'views/**/view.html',
+        ]
+    </script>
+    <!--webpart.html.end-->
+
+
+    <!--webpart.html.begin-->
+    <script>
+        [
+            'lib/**/panel.html',
+        ]
+    </script>
+    <!--webpart.html.end-->
+
+   
+    <script src="f/jquery/dist/jquery.debug.js"></script>
+    <script src="f/definejs/dist/definejs.debug.js"></script>
+
+
+    <script src="config.js"></script>
+
+    <!--webpart.js.begin-->
+    <script>
+        [
+            'lib/**/*.js',
+            'modules/**/*.js',
+            'views/**/*.js',
+            'routers/**/*.js',
+            'index.js',
+        ]
+    </script>
+    <!--webpart.js.end-->
+
+</body>
+
+</html>

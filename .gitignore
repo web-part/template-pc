@@ -1,0 +1,10 @@
+
+/node_modules
+/output
+
+/htdocs/babel
+/htdocs/packages
+/htdocs/style/css
+/htdocs/index.html
+
+package-lock.json
