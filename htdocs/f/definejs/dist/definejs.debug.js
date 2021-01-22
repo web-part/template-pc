@@ -1,14 +1,14 @@
 
 /**
 * definejs library
-* build time: 2021-01-19 09:18:27
+* build time: 2021-01-22 11:20:32
 * build tool: @definejs/packer
 * source packages (38):
 * {
 *     "@definejs/alert@1.0.0": "Alert",
 *     "@definejs/api@1.0.0": "API",
 *     "@definejs/app-module@1.0.0": "AppModule",
-*     "@definejs/app@1.0.0": "App",
+*     "@definejs/app@1.0.1": "App",
 *     "@definejs/array@1.0.0": "Array",
 *     "@definejs/confirm@1.0.0": "Confirm",
 *     "@definejs/date@1.0.0": "Date",
@@ -39,7 +39,7 @@
 *     "@definejs/tasker@1.0.0": "Tasker",
 *     "@definejs/template@1.0.0": "Template",
 *     "@definejs/timer@1.0.0": "Timer",
-*     "@definejs/toast@1.0.0": "Toast",
+*     "@definejs/toast@1.0.1": "Toast",
 *     "@definejs/tree@1.0.0": "Tree",
 *     "@definejs/url@1.0.0": "Url",
 *     "@definejs/view@1.0.0": "View"
@@ -146,7 +146,7 @@ const InnerMM = (function ({ require, }) {
 
         //内部使用的模块管理器。
         mm = new ModuleManager({
-            cross: true,       //内部的，要允许跨级加载模块。 用于在一步到位加载某个模块的默念配置，如 `SSH/Server.defaults`
+            cross: true,       //内部的，要允许跨级加载模块。 用于一步到位加载某个模块的默念配置，如 `SSH/Server.defaults`
         });
 
         return mm;
@@ -5800,7 +5800,7 @@ define('Url', function (require, module, exports) {
 });
 /**
 * src: @definejs/app/modules/App/Navigator/Views.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App/Navigator/Views', function (require, module, exports) { 
     const $ = require('jquery');
@@ -5915,7 +5915,7 @@ define('App/Navigator/Views', function (require, module, exports) {
 });
 /**
 * src: @definejs/app/modules/App/Navigator.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App/Navigator', function (require, module, exports) { 
     const Navigator = require('Navigator');
@@ -6094,7 +6094,7 @@ define('App/Navigator', function (require, module, exports) {
 });
 /**
 * src: @definejs/app/modules/App/Router.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App/Router', function (require, module, exports) { 
     
@@ -6104,9 +6104,9 @@ define('App/Router', function (require, module, exports) {
     
     //示例解释：
     /*
-    KISP.route('User', function (require, module) {
+    definejs.route('User', function (require, module, exports, User) {
         //以下两种写法是等价的。
-        //如果是写法一，则 KISP 内部也会转换成写法二。
+        //如果是写法一，则 definejs 内部也会转换成写法二。
         //写法一简单明了，但写法二功能更自由、丰富。
         //一般情况下用写法一，必要时可用写法二。
     
@@ -6117,12 +6117,10 @@ define('App/Router', function (require, module, exports) {
         };
     
         //写法二。
-        return function (User) {
-            User.on({
-                'login': function () { },
-                'logout': function () { },
-            });
-        };
+        User.on({
+            'login': function () { },
+            'logout': function () { },
+        });
     });
     */
     
@@ -6152,12 +6150,13 @@ define('App/Router', function (require, module, exports) {
     
             let all = $Object.map(name$factory, function (name, factory) {
     
-                if (typeof factory == 'function') {
-                    factory = factory($require, $module, $exports);
-                }
+                return function (M) {
+                    let event$fn = factory($require, $module, $exports, M);
     
-                return factory;
-    
+                    if ($Object.isPlain(event$fn)) {
+                        M.on(event$fn);
+                    }
+                };
             });
     
             $module.bind(all);
@@ -6173,7 +6172,7 @@ define('App/Router', function (require, module, exports) {
 });
 /**
 * src: @definejs/app/modules/App.defaults.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App.defaults', function (require, module, exports) { 
     /**
@@ -6204,7 +6203,7 @@ define('App.defaults', function (require, module, exports) {
 });
 /**
 * src: @definejs/app/modules/App.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App', function (require, module, exports) { 
     
@@ -12622,7 +12621,7 @@ define('Tabs', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast/Masker.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Masker', function (require, module, exports) { 
     const Masker = require('Masker');
@@ -12655,7 +12654,7 @@ define('Toast/Masker', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast/Meta.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Meta', function (require, module, exports) { 
     
@@ -12711,7 +12710,7 @@ define('Toast/Meta', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast/Sample.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Sample', function (require, module, exports) { 
     
@@ -12727,7 +12726,7 @@ define('Toast/Sample', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast/Style.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Style', function (require, module, exports) { 
     const $Object = require('Object');
@@ -12756,7 +12755,7 @@ define('Toast/Style', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast.defaults.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast.defaults', function (require, module, exports) { 
     /**
@@ -12817,7 +12816,7 @@ define('Toast.defaults', function (require, module, exports) {
 });
 /**
 * src: @definejs/toast/modules/Toast.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast', function (require, module, exports) { 
     const $ = require('jquery');
@@ -13364,16 +13363,20 @@ define('circular-json', function (require, module, exports) {
     
 });
 
-//重新定义多一份 module-manager 相关的模块，以给内部的其它包使用。
+//重新定义多一份 `module-manager` 相关的模块，以给内部的其它包使用。
 BaseMM.each(function (id) {
     InnerMM.define(id, function (require, module, exports) {
         return BaseMM.require(id);
     });
 });
 
+
+
+
+
 //导出的全局对象。
-//以下代码由 `@definejs/packer` 工具处理生成。
-global['KISP'] = (function ({ require, bind, }) {
+//以下代码由 `@definejs/packer` 工具处理填充生成。
+const GlobalExports = (function ({ require, bind, }) {
     let exports = {
         require,
         /**
@@ -13386,6 +13389,50 @@ global['KISP'] = (function ({ require, bind, }) {
             return new M(...args);
         },
     };
+
+    let packages = exports['packages'] = {
+        //原始包名对应的主模块。
+        '@definejs/alert': 'Alert',
+        '@definejs/api': 'API',
+        '@definejs/app': 'App',
+        '@definejs/app-module': 'AppModule',
+        '@definejs/array': 'Array',
+        '@definejs/confirm': 'Confirm',
+        '@definejs/date': 'Date',
+        '@definejs/defaults': 'Defaults',
+        '@definejs/dialog': 'Dialog',
+        '@definejs/emitter': 'Emitter',
+        '@definejs/escape': 'Escape',
+        '@definejs/fn': 'Fn',
+        '@definejs/hash': 'Hash',
+        '@definejs/html-parser': 'HTMLParser',
+        '@definejs/json': 'JSON',
+        '@definejs/loading': 'Loading',
+        '@definejs/local-storage': 'LocalStorage',
+        '@definejs/masker': 'Masker',
+        '@definejs/math': 'Math',
+        '@definejs/module-manager': 'ModuleManager',
+        '@definejs/navigator': 'Navigator',
+        '@definejs/object': 'Object',
+        '@definejs/package': 'Package',
+        '@definejs/panel': 'Panel',
+        '@definejs/proxy': 'Proxy',
+        '@definejs/query': 'Query',
+        '@definejs/script': 'Script',
+        '@definejs/session-storage': 'SessionStorage',
+        '@definejs/string': 'String',
+        '@definejs/style': 'Style',
+        '@definejs/tabs': 'Tabs',
+        '@definejs/tasker': 'Tasker',
+        '@definejs/template': 'Template',
+        '@definejs/timer': 'Timer',
+        '@definejs/toast': 'Toast',
+        '@definejs/tree': 'Tree',
+        '@definejs/url': 'Url',
+        '@definejs/view': 'View',
+    };
+
+    exports['modules'] = Object.values(packages).sort();
 
     exports['alert'] = bind('Alert', 'show');
     exports['confirm'] = bind('Confirm', 'show');
@@ -13402,54 +13449,46 @@ global['KISP'] = (function ({ require, bind, }) {
                 return new M(...args);
             };
 
-    exports['modules'] = [
-        //外部可以通过 KISP.require(id) 进行使用的模块列表，共 38 个。
-        'API',
-        'Alert',
-        'App',
-        'AppModule',
-        'Array',
-        'Confirm',
-        'Date',
-        'Defaults',
-        'Dialog',
-        'Emitter',
-        'Escape',
-        'Fn',
-        'HTMLParser',
-        'Hash',
-        'JSON',
-        'Loading',
-        'LocalStorage',
-        'Masker',
-        'Math',
-        'ModuleManager',
-        'Navigator',
-        'Object',
-        'Package',
-        'Panel',
-        'Proxy',
-        'Query',
-        'Script',
-        'SessionStorage',
-        'String',
-        'Style',
-        'Tabs',
-        'Tasker',
-        'Template',
-        'Timer',
-        'Toast',
-        'Tree',
-        'Url',
-        'View',
-    ];
 
+    
+    //直接给业务层增加 `@definejs/` 域内的对应的包。
+    //假设对外暴露的全局名为 definejs，传统的想要加载 Emitter 模块，则要使用方式：
+    // const Emitter = definejs.require('Emitter');
+    //下面的代码可以实现为使用方式：
+    // const Emitter = require('@definejs/emitter');
+    //两种使用方式都可以，是等价的。
+    const AppModule = require('AppModule');
+    const scope = `@definejs/`;
+    let mm = AppModule.mm();
+    let mm_require = mm.require.bind(mm);
+
+    mm.require = function (id, ...args) {
+        if (!id.startsWith(scope)) {
+            return mm_require(id, ...args);
+        }
+
+        let mid = packages[id];
+
+        if (!mid) {
+            throw new Error(`此打包的 '@definejs/' 域中不存在 '${id}' 对应的主模块。`);
+        }
+
+        return require(mid);
+    };
+    
+    
     return exports;
+
 })(InnerMM);
 
 
-
-
+//用安全的方式导出到全局名称下。
+if (global['definejs']) {
+    Object.assign(global['definejs'], GlobalExports);
+}
+else {
+    global['definejs'] = GlobalExports;
+}
 
 
 

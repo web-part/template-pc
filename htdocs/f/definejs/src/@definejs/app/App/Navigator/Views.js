@@ -1,6 +1,6 @@
 /**
 * src: @definejs/app/modules/App/Navigator/Views.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App/Navigator/Views', function (require, module, exports) { 
     const $ = require('jquery');

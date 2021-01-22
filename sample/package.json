@@ -1,5 +1,5 @@
 {
-  "name": "{name}",
+  "name": "webpart-demo-pc-normal",
   "version": "1.0.0",
   "description": "用于创建针对 PC 端的标准模式的网站模板。",
   "scripts": {
@@ -9,5 +9,7 @@
   "author": "micty",
   "email": "mictydeng@qq.com",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "@webpart/proxy": "^1.0.0"
+  }
 }

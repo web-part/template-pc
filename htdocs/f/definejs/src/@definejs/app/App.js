@@ -1,6 +1,6 @@
 /**
 * src: @definejs/app/modules/App.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App', function (require, module, exports) { 
     

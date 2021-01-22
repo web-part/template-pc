@@ -1,6 +1,6 @@
 /**
 * src: @definejs/toast/modules/Toast/Style.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Style', function (require, module, exports) { 
     const $Object = require('Object');

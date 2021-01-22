@@ -11,6 +11,17 @@ module.exports = {
         'babel/',       //生成的。
         'packages/',    //生成的。
         'style/css/',   //生成的。
+
+        'f/definejs/**/*',
+        '!f/definejs/dist/',
+
+        'f/jquery/**/*',
+        '!f/jquery/dist/jquery.debug.js',
+        '!f/jquery/dist/jquery.min.js',
+
+        'f/font-awesome/**/*',
+        '!f/font-awesome/css/',
+        '!f/font-awesome/fonts/',
     ],
 
     //构建完成后需要清理的文件或目录。

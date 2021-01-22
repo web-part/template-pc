@@ -1,6 +1,6 @@
 /**
 * src: @definejs/toast/modules/Toast.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast', function (require, module, exports) { 
     const $ = require('jquery');

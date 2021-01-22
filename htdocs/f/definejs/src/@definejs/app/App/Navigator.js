@@ -1,6 +1,6 @@
 /**
 * src: @definejs/app/modules/App/Navigator.js
-* pkg: @definejs/app@1.0.0
+* pkg: @definejs/app@1.0.1
 */
 define('App/Navigator', function (require, module, exports) { 
     const Navigator = require('Navigator');

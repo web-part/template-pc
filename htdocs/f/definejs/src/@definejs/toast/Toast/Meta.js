@@ -1,6 +1,6 @@
 /**
 * src: @definejs/toast/modules/Toast/Meta.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast/Meta', function (require, module, exports) { 
     

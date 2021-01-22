@@ -553,7 +553,7 @@
 
 /* @definejs/toast/Toast.less */
 .definejs-toast {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-pack: center;

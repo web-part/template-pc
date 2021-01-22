@@ -2,6 +2,10 @@
 
 
 module.exports = {
+    //可选。
+    //代理规则。
+    proxy: require('./server/proxy'),
+    
     port: 8001, //必选，端口号。
     open: false, //可选，是否自动打开浏览器。
 
@@ -26,9 +30,7 @@ module.exports = {
         // ],
     },
 
-    //可选。
-    //代理规则。
-    proxy: require('./server/proxy'),
+    
 
 
 };

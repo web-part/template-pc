@@ -1,6 +1,6 @@
 /**
 * src: @definejs/toast/modules/Toast.defaults.js
-* pkg: @definejs/toast@1.0.0
+* pkg: @definejs/toast@1.0.1
 */
 define('Toast.defaults', function (require, module, exports) { 
     /**
