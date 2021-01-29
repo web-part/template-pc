@@ -1,5 +1,20 @@
 ﻿<section data-view="/About" style="display: none;">
    
-    关于
+    <h1>
+        [关于]视图
+    </h1>
+   
+
+
+    <button data-cmd="back">返回</button>
+
+    <ul data-panel="/About/List">
+        <template>
+            <li data-index="{index}">
+                {order}.{name} - {value}
+            </li>
+        </template>
+        
+    </ul>
     
 </section>

@@ -1,6 +1,6 @@
 {
   "name": "@webpart/template-pc",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "用于创建针对 PC 端的标准模式的网站模板。",
   "scripts": {},
   "keywords": [],

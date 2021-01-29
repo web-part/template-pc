@@ -1,4 +1,4 @@
 ﻿
 define('$', function (require, module, exports) {
-    return window.KISP.require('jquery');
+    return window.definejs.require('jquery');
 });

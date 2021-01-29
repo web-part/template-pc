@@ -1,12 +1,13 @@
 ﻿
 
 /**
-* 关于视图。
+* 主页视图。
 */
-define.view('/About', function (require, module, view) {
+define.view('/Home', function (require, module, view) {
     
-    const List = module.require('List');
+    const Menus = module.require('Menus');
 
+    
 
     /**
     * 初始化时触发。
@@ -14,20 +15,12 @@ define.view('/About', function (require, module, view) {
     * 适合用来绑定事件等只需要执行一次的操作。
     */
     view.on('init', function () {
-
-        view.$on('click', {
-            '[data-cmd]': function () {
-                let cmd = this.getAttribute('data-cmd');
-
-                view.fire(cmd);
+        Menus.on({
+            'about': function (list) { 
+                view.fire('about', [list]);
             },
         });
 
-        List.on({
-            'item': function (item, index) {
-                definejs.alert(item)
-            },
-        });
 
        
     });
@@ -38,10 +31,9 @@ define.view('/About', function (require, module, view) {
     * 渲染。
     * 外面每次调 render() 时触发。
     */
-    view.on('render', function (list) {
+    view.on('render', function (data) {
 
-        List.render(list);
-
+        Menus.render();
 
     });
 

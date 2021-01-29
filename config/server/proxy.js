@@ -1,7 +1,7 @@
 
 
 
-const Proxy = require('@webpart/proxy');
+// const Proxy = require('@webpart/proxy');
 
 
 module.exports = {
