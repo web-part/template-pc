@@ -1,10 +1,30 @@
 
 module.exports = {
-    //此处如果不指定，则默认会使用 master 节点的。
-    // 'defaults': require('./master/defaults'),
-    // 'defaults.pack': require('./master/defaults.pack'),
+    //运行 `webpart watch` 命令后要输出的一些信息的路径。
+    //如果不指定，则不输出。
+    //在同目录的 server.js 配置中用到。
+    file: './output/watch.json',
 
-    'watch': require('./watch/watch'),
-    'watch.pack': require('./watch/watch.pack'),
+    /**
+    * 通用部分。
+    */
+    '': {
+        masters: {
+            minify: false,
+        },
+    },
+
+    /**
+    * 针对分布式打包。
+    */
+    '.pack': {
+        packages: {
+            minify: false,
+            name: '{name}',
+            query: {
+                md5: 4,
+            },
+        },
+    },
 
 };

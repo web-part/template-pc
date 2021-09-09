@@ -8,12 +8,10 @@ module.exports = {
     //网站的根目录。 
     htdocs: 'htdocs/',
 
-    //输出的日志文本文件。
-    console: {
-        file: './output/console.log',    //如果指定则输出日出文件。 
-        timestamp: true,        //是否自动加上时间戳。
-        delay: 500,             //
-    },
+    // //输出的日志文本文件。
+    // console: {
+    //     file: './output/master.console.log',    //如果指定则输出日出文件。 
+    // },
 
     //文件版本。
     edition: {

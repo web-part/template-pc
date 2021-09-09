@@ -1,8 +1,19 @@
 .gitignore
 /**/.DS_Store
 
+/definejs
+
 /node_modules
 /output
+
+/htdocs/f/definejs/meta
+/htdocs/f/definejs/src
+
+/htdocs/f/jquery/external
+/htdocs/f/jquery/src
+
+/htdocs/f/font-awesome/less
+/htdocs/f/font-awesome/scss
 
 /htdocs/babel
 /htdocs/packages

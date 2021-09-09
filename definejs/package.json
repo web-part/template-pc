@@ -1,0 +1,15 @@
+{
+  "name": "definejs-mobile",
+  "version": "1.0.0",
+  "description": "针对 PC 端的 definejs 打包成单独库",
+  "main": "definejs.packer.config.js",
+  "scripts": {
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@definejs/file": "^1.0.0"
+  }
+}

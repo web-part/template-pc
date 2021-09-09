@@ -2,15 +2,17 @@
 
 module.exports = {
     htdocs: 'htdocs/',
-    output: 'output/stat/',
+    //解析成功后要输出的 json 数据的目录。
+    //如果不指定，则不输出。
+    // output: 'output/stat/',
 
     module: {
         defines: [
             'define',
             'define.panel',
             'define.view',
-            'KISP.panel',
-            'KISP.view',
+            'definejs.launch', //注意这个是针对 launch() 的。
+
         ],
 
         patterns: [
@@ -18,6 +20,7 @@ module.exports = {
             'lib/**/*.js',
             'modules/**/*.js',
             'views/**/*.js',
+            'index.js',     //注意这个是针对 launch() 的。
         ],
 
         excludes: [ ],
@@ -34,6 +37,7 @@ module.exports = {
         ],
 
         patterns: [
+            '**/*.master.html',
             'lib/**/*.html',
             'modules/**/*.html',
             'views/**/*.html',

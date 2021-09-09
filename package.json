@@ -1,17 +1,18 @@
 {
-  "name": "@webpart/template-pc",
-  "version": "1.0.6",
-  "description": "用于创建针对 PC 端的标准模式的网站模板。",
-  "scripts": {},
-  "keywords": [],
-  "author": "micty",
-  "email": "mictydeng@qq.com",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/web-part/template-pc.git"
-  },
-  "devDependencies": {
-    
-  }
+    "name": "@webpart/template-pc",
+    "version": "2.0.0",
+    "description": "用于创建针对 PC 端标准模式下的网站模板。",
+    "scripts": {},
+    "keywords": ["PC 端模板", "pc"],
+    "author": "micty",
+    "email": "mictydeng@qq.com",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/web-part/template-pc.git"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        
+    }
 }
